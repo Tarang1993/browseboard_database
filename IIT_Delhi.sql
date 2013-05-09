@@ -16,6 +16,33 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `Article`
+--
+
+DROP TABLE IF EXISTS `Article`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Article` (
+  `article_id` int(25) NOT NULL,
+  `article_cat_id` int(25) NOT NULL,
+  `article_sub_cat_id` int(25) NOT NULL,
+  `date_posted` date NOT NULL,
+  `posted_by` varchar(100) NOT NULL,
+  `article_approval` tinyint(1) NOT NULL,
+  `article_content` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Article`
+--
+
+LOCK TABLES `Article` WRITE;
+/*!40000 ALTER TABLE `Article` DISABLE KEYS */;
+/*!40000 ALTER TABLE `Article` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `Category`
 --
 
@@ -70,6 +97,30 @@ LOCK TABLES `College_events` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `Editor`
+--
+
+DROP TABLE IF EXISTS `Editor`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Editor` (
+  `id` int(25) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Editor`
+--
+
+LOCK TABLES `Editor` WRITE;
+/*!40000 ALTER TABLE `Editor` DISABLE KEYS */;
+/*!40000 ALTER TABLE `Editor` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `Intercollege_events`
 --
 
@@ -98,6 +149,30 @@ CREATE TABLE `Intercollege_events` (
 LOCK TABLES `Intercollege_events` WRITE;
 /*!40000 ALTER TABLE `Intercollege_events` DISABLE KEYS */;
 /*!40000 ALTER TABLE `Intercollege_events` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Moderator`
+--
+
+DROP TABLE IF EXISTS `Moderator`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Moderator` (
+  `id` int(25) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Moderator`
+--
+
+LOCK TABLES `Moderator` WRITE;
+/*!40000 ALTER TABLE `Moderator` DISABLE KEYS */;
+/*!40000 ALTER TABLE `Moderator` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -220,4 +295,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-05-07 17:15:13
+-- Dump completed on 2013-05-09  6:55:31
