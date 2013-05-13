@@ -264,15 +264,16 @@ DROP TABLE IF EXISTS `user_detail`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `user_detail` (
   `id` int(25) NOT NULL,
-  `user_name` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `display_name` varchar(100) NOT NULL,
-  `age` int(25) NOT NULL,
-  `gender` varchar(5) NOT NULL,
-  `date_of_birth` date NOT NULL,
+  `user_name` varchar(100) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `display_name` varchar(100) DEFAULT NULL,
+  `age` int(25) DEFAULT NULL,
+  `gender` varchar(5) DEFAULT NULL,
+  `date_of_birth` date DEFAULT NULL,
   `home_town` varchar(100) DEFAULT NULL,
   `date_of_join` date DEFAULT NULL,
-  `password` varchar(50) NOT NULL
+  `password` varchar(50) NOT NULL,
+  `verify` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -282,7 +283,7 @@ CREATE TABLE `user_detail` (
 
 LOCK TABLES `user_detail` WRITE;
 /*!40000 ALTER TABLE `user_detail` DISABLE KEYS */;
-INSERT INTO `user_detail` VALUES (1,'tarang','tarangrockr@gmail.com','tarang',19,'M','1993-10-16','Nadiad','2013-08-19','tarang'),(2,'ashish','ashishtotla@gmail.com','Ashish',19,'M','1993-08-25','Surat','2013-08-25','ashish'),(3,'vishal','vishal.2947@gmail.com','Vishal',19,'M','1992-06-12','Delhi','2013-08-12','vishal'),(4,'parth','parth1992@gmail.com','Parth',20,'M','1992-01-13','Ahmedabad','2013-07-05','parth'),(5,'anjali','anjali1994@gmail.com','Anjali',18,'F','1994-07-31','Mumbai','2013-09-14','anjali');
+INSERT INTO `user_detail` VALUES (1,'tarang','tarangrockr@gmail.com','tarang',19,'M','1993-10-16','Nadiad','2013-08-19','tarang',0),(2,'ashish','ashishtotla@gmail.com','Ashish',19,'M','1993-08-25','Surat','2013-08-25','ashish',0),(3,'vishal','vishal.2947@gmail.com','Vishal',19,'M','1992-06-12','Delhi','2013-08-12','vishal',0),(4,'parth','parth1992@gmail.com','Parth',20,'M','1992-01-13','Ahmedabad','2013-07-05','parth',0),(5,'anjali','anjali1994@gmail.com','Anjali',18,'F','1994-07-31','Mumbai','2013-09-14','anjali',0);
 /*!40000 ALTER TABLE `user_detail` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -295,4 +296,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-05-09  6:55:31
+-- Dump completed on 2013-05-13 19:54:38
