@@ -29,7 +29,8 @@ CREATE TABLE `Article` (
   `date_posted` date NOT NULL,
   `posted_by` varchar(100) NOT NULL,
   `article_approval` tinyint(1) NOT NULL,
-  `article_content` varchar(500) NOT NULL
+  `article_content` varchar(500) NOT NULL,
+  `article_name` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -293,7 +294,7 @@ CREATE TABLE `user_detail` (
 
 LOCK TABLES `user_detail` WRITE;
 /*!40000 ALTER TABLE `user_detail` DISABLE KEYS */;
-INSERT INTO `user_detail` VALUES (1,'tarang','tarangrockr@gmail.com','tarang',19,'M','1993-10-16','Nadiad','2013-08-19','tarang',0,NULL,NULL,NULL,NULL,NULL,NULL),(2,'ashish','ashishtotla@gmail.com','Ashish',19,'M','1993-08-25','Surat','2013-08-25','ashish',0,NULL,NULL,NULL,NULL,NULL,NULL),(3,'vishal','vishal.2947@gmail.com','Vishal',19,'M','1992-06-12','Delhi','2013-08-12','vishal',0,NULL,NULL,NULL,NULL,NULL,NULL),(4,'parth','parth1992@gmail.com','Parth',20,'M','1992-01-13','Ahmedabad','2013-07-05','parth',0,NULL,NULL,NULL,NULL,NULL,NULL),(5,'anjali','anjali1994@gmail.com','Anjali',18,'F','1994-07-31','Mumbai','2013-09-14','anjali',0,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `user_detail` VALUES (1,'tarang','tarangrockr@gmail.com','tarang',19,'M','1993-10-16','Nadiad','2013-08-19','tarang',0,NULL,NULL,NULL,NULL,NULL,NULL),(2,'ashish','ashishtotla@gmail.com','Ashish',19,'M','1993-08-25','Surat','2013-08-25','ashish',0,NULL,NULL,NULL,NULL,NULL,NULL),(3,'vishal','vishal.2947@gmail.com','Vishal',19,'M','1992-06-12','Delhi','2013-08-12','vishal',0,NULL,NULL,NULL,NULL,NULL,NULL),(4,'parth','parth1992@gmail.com','Parth',20,'M','1992-01-13','Ahmedabad','2013-07-05','parth',0,NULL,NULL,NULL,NULL,NULL,NULL),(5,'anjali','anjali1994@gmail.com','Anjali',18,'F','1994-07-31','Mumbai','2013-09-14','anjali',0,NULL,NULL,NULL,NULL,NULL,NULL),(45,'ahah',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'dd`',1,NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `user_detail` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -306,4 +307,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-05-13 22:57:19
+-- Dump completed on 2013-05-14  8:36:44
